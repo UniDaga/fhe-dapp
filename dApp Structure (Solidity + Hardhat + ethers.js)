@@ -1,0 +1,16 @@
+fhe-dapp/
+├── contracts/
+│   └── MyFHEContract.sol       # Smart contract file
+├── scripts/
+│   └── deploy.js               # Deployment script
+├── test/
+│   └── MyFHEContract.test.js   # Unit tests
+├── frontend/
+│   ├── public/
+│   ├── src/
+│   │   ├── App.jsx
+│   │   ├── contractABI.json
+│   │   └── ethersProvider.js
+│   └── package.json
+├── hardhat.config.js
+└── package.json
