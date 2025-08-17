@@ -1,0 +1,11 @@
+async function main() {
+  const MyFHE = await ethers.getContractFactory("MyFHEContract");
+  const myFHE = await MyFHE.deploy();
+  await myFHE.deployed();
+  console.log("MyFHE deployed to:", myFHE.address);
+}
+
+main().catch((error) => {
+  console.error(error);
+  process.exit(1);
+});
