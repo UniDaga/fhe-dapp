@@ -1,0 +1,13 @@
+const { expect } = require("chai");
+
+describe("MyFHEContract", function () {
+  it("should store and return encrypted value", async function () {
+    const [owner] = await ethers.getSigners();
+    const MyFHE = await ethers.getContractFactory("MyFHEContract");
+    const myFHE = await MyFHE.deploy();
+    await myFHE.deployed();
+
+    await myFHE.storeEncrypted(12345);
+    expect(await myFHE.getEncrypted(owner.address)).to.equal(12345);
+  });
+});
