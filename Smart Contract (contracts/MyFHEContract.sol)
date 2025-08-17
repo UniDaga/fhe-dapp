@@ -1,0 +1,14 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+contract MyFHEContract {
+    mapping(address => uint256) public encryptedValues;
+
+    function storeEncrypted(uint256 encrypted) external {
+        encryptedValues[msg.sender] = encrypted;
+    }
+
+    function getEncrypted(address user) external view returns (uint256) {
+        return encryptedValues[user];
+    }
+}
